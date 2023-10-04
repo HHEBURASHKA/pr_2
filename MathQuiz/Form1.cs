@@ -22,13 +22,25 @@ namespace MathQuiz
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
+        {
+            int timeLeft;
+            
+        }
+
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            StartTheQuiz();
+            startButton.Enabled = false;
+        }
+
+        public void StartTheQuiz()
         {
             Random randomizer = new Random();
             int addend1;
             int addend2;
-            addend1 = randomizer.Next(51);
-            addend2 = randomizer.Next(51);
+            addend1 = randomizer.Next(77);
+            addend2 = randomizer.Next(77);
             plusLeftLabel.Text = addend1.ToString();
             plusRightLabel.Text = addend2.ToString();
             sum.Value = 0;
@@ -38,8 +50,8 @@ namespace MathQuiz
             int multiplier;
             int dividend;
             int divisor;
-            minuend = randomizer.Next(1,101);
-            subtrahend = randomizer.Next(1,minuend);
+            minuend = randomizer.Next(1, 101);
+            subtrahend = randomizer.Next(1, minuend);
             minusLeftLabel.Text = minuend.ToString();
             minusRightLabel.Text = subtrahend.ToString();
             difference.Value = 0;
@@ -55,5 +67,16 @@ namespace MathQuiz
             dividedRightLabel.Text = divisor.ToString();
             quotient.Value = 0;
         }
+        private bool CheckTheAnswer()
+        {
+            if ((addend1 + addent2 == sum.Value)
+                && (minuend - subtrahend == difference.Value)
+                && (multiplicand - subtrahend == product.Value)
+                && (dividend - divisor == quotient.Value))
+                return true;
+            else
+                return false;
+        }
     }
 }
+ 

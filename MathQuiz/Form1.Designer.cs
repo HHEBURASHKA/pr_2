@@ -1,4 +1,6 @@
-﻿namespace MathQuiz
+﻿using System;
+
+namespace MathQuiz
 {
     partial class Form1
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -51,6 +54,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.minusLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -61,7 +65,7 @@
             // 
             this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeLabel.Location = new System.Drawing.Point(272, 9);
+            this.timeLabel.Location = new System.Drawing.Point(272, 8);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(200, 30);
             this.timeLabel.TabIndex = 0;
@@ -279,8 +283,13 @@
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(158, 34);
             this.startButton.TabIndex = 0;
-            this.startButton.Text = "Начать тест";
+            this.startButton.Text = "StartTheQuiz";
             this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
             // 
             // Form1
             // 
@@ -324,6 +333,11 @@
 
         }
 
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label timeLabel;
@@ -349,6 +363,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label minusLeftLabel;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
