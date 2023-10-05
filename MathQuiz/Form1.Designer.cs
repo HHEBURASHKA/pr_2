@@ -129,6 +129,8 @@ namespace MathQuiz
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 35);
             this.sum.TabIndex = 1;
+            this.sum.ValueChanged += new System.EventHandler(this.sum_ValueChanged);
+            this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // quotient
             // 
@@ -137,6 +139,8 @@ namespace MathQuiz
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 35);
             this.quotient.TabIndex = 4;
+            this.quotient.ValueChanged += new System.EventHandler(this.quotient_ValueChanged);
+            this.quotient.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label9
             // 
@@ -185,6 +189,8 @@ namespace MathQuiz
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(100, 35);
             this.product.TabIndex = 3;
+            this.product.ValueChanged += new System.EventHandler(this.product_ValueChanged);
+            this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label7
             // 
@@ -233,6 +239,7 @@ namespace MathQuiz
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(100, 35);
             this.difference.TabIndex = 2;
+            this.difference.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label5
             // 

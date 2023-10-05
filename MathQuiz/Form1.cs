@@ -108,7 +108,48 @@ namespace MathQuiz
                 startButton.Enabled = true;
                 
             }
+            if (timeLeft <= 5)
+            {
+                timeLabel.BackColor = Color.Red;
+            }
         }
-    }
+
+        private void answer_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+            if (answerBox != null)
+            { }
+            int lengthofAnswer = answerBox.Value.ToString().Length;
+            answerBox.Select(0, lengthofAnswer);
+        }
+
+        private void sum_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+            if (answerBox != null)
+            { }
+            int lengthofAnswer = answerBox.Value.ToString().Length;
+            answerBox.Select(0, lengthofAnswer);
+        }
+
+        private void product_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+            if (answerBox != null)
+            { }
+            int lengthofAnswer = answerBox.Value.ToString().Length;
+            answerBox.Select(0, lengthofAnswer);
+        }
+
+        private void quotient_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+            if (answerBox != null)
+            { }
+            int lengthofAnswer = answerBox.Value.ToString().Length;
+            answerBox.Select(0, lengthofAnswer);
+        }
+    }// Звуковой сигнал можно не делать по приказу генерала Гавса
 }
+
  
