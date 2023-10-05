@@ -39,6 +39,7 @@ namespace MathQuiz
 
         public void StartTheQuiz()
         {
+            //Вот зачем все это спрашивать?
             Random randomizer = new Random();
             addend1 = randomizer.Next(51);
             addend2 = randomizer.Next(51);
@@ -55,6 +56,7 @@ namespace MathQuiz
             timesLeftLabel.Text = multiplicand.ToString();
             timesRightLabel.Text = multiplier.ToString();
             product.Value = 0;
+            //Ну работает все же
             divisor = randomizer.Next(2, 11);
             int temporaryQuotient = randomizer.Next(2, 11);
             dividend = divisor * temporaryQuotient;
@@ -67,6 +69,7 @@ namespace MathQuiz
         }
         private bool CheckTheAnswer()
         {
+            //Может все?
             if ((addend1 + addend2 == sum.Value)
                 && (minuend - subtrahend == difference.Value)
                 && (multiplicand * multiplier == product.Value)
@@ -98,6 +101,7 @@ namespace MathQuiz
             }
             else
             {
+                //Как дела?
                 timer1.Stop();
                 timeLabel.Text = "Время вышло!";
                 MessageBox.Show("ты не успел", "сам виноват!");
@@ -116,6 +120,7 @@ namespace MathQuiz
 
         private void answer_Enter(object sender, EventArgs e)
         {
+            //Я делал старался а вы придираетесь 
             NumericUpDown answerBox = sender as NumericUpDown;
             if (answerBox != null)
             { }
