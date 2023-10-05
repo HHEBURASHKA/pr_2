@@ -53,8 +53,8 @@ namespace MathQuiz
             this.minusRightLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.minusLeftLabel = new System.Windows.Forms.Label();
-            this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.startButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -213,7 +213,7 @@ namespace MathQuiz
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 50);
             this.label6.TabIndex = 13;
-            this.label6.Text = "x";
+            this.label6.Text = "*";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timesLeftLabel
@@ -274,22 +274,22 @@ namespace MathQuiz
             this.minusLeftLabel.Text = "?";
             this.minusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // startButton
-            // 
-            this.startButton.AutoSize = true;
-            this.startButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startButton.Location = new System.Drawing.Point(148, 315);
-            this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(158, 34);
-            this.startButton.TabIndex = 0;
-            this.startButton.Text = "StartTheQuiz";
-            this.startButton.UseVisualStyleBackColor = false;
-            this.startButton.Click += new System.EventHandler(this.startButton_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // startButton
+            // 
+            this.startButton.AutoSize = true;
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startButton.Location = new System.Drawing.Point(151, 315);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(175, 36);
+            this.startButton.TabIndex = 0;
+            this.startButton.Text = "Начать тест";
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click_1);
             // 
             // Form1
             // 
@@ -362,8 +362,8 @@ namespace MathQuiz
         private System.Windows.Forms.Label minusRightLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label minusLeftLabel;
-        private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button startButton;
     }
 }
 
